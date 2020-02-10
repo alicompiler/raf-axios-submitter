@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {setRafAxiosSubmitterAsDefaultSubmitter} from "./setup";
+import {setupRafValidatorAsDefaultValidator} from "raf-default-validator/dist/setup"
+import Form from "react-auto-form-core/dist/Form/Form";
+import TextField from "react-auto-form-core/dist/DefaultElement/TextField";
+import FileField from "react-auto-form-core/dist/DefaultElement/DefaultFileField";
+
+setRafAxiosSubmitterAsDefaultSubmitter();
+setupRafValidatorAsDefaultValidator();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Form fields={[
+                {as: TextField, name: 'test'},
+                {as: FileField, name: 'image'},
+            ]}
+                  submitConfig={{
+                      url: 'http://sometestingurl.com',
+                      method: 'post'
+                  }}
+            />
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,7 @@
+src
+.idea
+.vscode
+public
+package-lock.json
+tsconfig.json
+node_modules
