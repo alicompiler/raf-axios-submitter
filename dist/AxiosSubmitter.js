@@ -31,7 +31,7 @@ var AxiosSubmitter = /** @class */ (function () {
         if (this.changeLoadingStatus())
             this.getForm().stopLoading();
         this.getForm().emitEvent({
-            type: PreDefinedEventType.ON_START_SUBMITTING,
+            type: PreDefinedEventType.ON_SUCCESS_SUBMITTING,
             payload: response
         });
         if (this.getSubmitConfig().onSuccess)

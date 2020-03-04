@@ -45,7 +45,7 @@ export default class AxiosSubmitter implements Submitter {
             this.getForm().stopLoading();
 
         this.getForm().emitEvent({
-            type: PreDefinedEventType.ON_START_SUBMITTING,
+            type: PreDefinedEventType.ON_SUCCESS_SUBMITTING,
             payload: response
         });
 
