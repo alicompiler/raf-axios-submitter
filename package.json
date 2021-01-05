@@ -32,7 +32,7 @@
     ]
   },
   "devDependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "raf-default-validator": "^0.1.0",
     "react-auto-form-core": "^0.1.2",
     "typescript": "^3.7.5",
